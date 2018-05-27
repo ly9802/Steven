@@ -1,0 +1,89 @@
+---
+title: "Similarity"
+author: "n9794182"
+date: "27 May 2018"
+output: html_document
+---
+
+### Task3
+####display the original dataset
+```{r}
+mtcars
+```
+#### Task3.1
+####create a function that is used to calculate the distance between the vector and zero
+```{r}
+getmode<-function(x){
+  s<-0
+  for (i in c(1:length(x))) {
+    s=s+x[i]*x[i]
+    
+  }
+  return(sqrt(s))
+}
+```
+#### create the function that is used to caluculate cosine value between two vectors.
+```{r}
+cosine<-function(x,y) {
+  
+  z=getmode(x)*getmode(y)
+  return((x%*%y)/z)
+}
+```
+
+####create a empty matrix A
+```{r}
+A<-matrix(nrow=32,ncol=32)
+```
+#### store the cosine value of each pair of vector into the empty matrix A
+```{r}
+
+for (i in c(1:32)) {
+  for (j in c(1:32)) {
+    x<-as.numeric(mtcars[i,])
+    y<-as.numeric(mtcars[j,])
+    z<-cosine(x,y)
+    A[i,j]<-z
+  }
+  
+}
+```
+####outpu the matrix A
+```{r}
+print(A)
+```
+#### Task3.2
+```{r}
+mtcars
+
+```
+####show the name of each vector
+```{r}
+rownames(mtcars[1,])
+```
+####find the most value in all the cosine values of each pair of vector and store the pair of vector into matrix Mostsimilarity 
+```{r}
+Mostsimilarity<-matrix(nrow=32,ncol=2)
+leastsimilarity<-matrix(nrow=32,ncol=2)
+for (i in c(1:32)) {
+  max<-0
+  maxi<-0
+  maxj<-0
+  
+  
+  for(j in c(1:32)){
+    if(i!=j){
+      if(A[i,j]>max){
+        max<-A[i,j]
+        maxi<-i
+        maxj<-j
+      }
+      
+    }
+  }
+  Mostsimilarity[i,1]<-rownames(mtcars[maxi,])
+  Mostsimilarity[i,2]<-rownames(mtcars[maxj,])
+  
+}
+Mostsimilarity
+```
