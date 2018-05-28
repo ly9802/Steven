@@ -4,7 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /*
-This program is used to track several customers who have owed 
+This program is used to track several customers who have owed.this is an assignment of fuundamentals of programming
+there are several requirement as follow:
+1. the customer name should be between 6 and 14 characters
+2. the account number should be 6 digitals and begin with 4
+3.the overpayment is not allowed.
+4.the account number should be used for once
 */
 namespace Account_balance
 {//create a class named Customer as template
