@@ -1,3 +1,4 @@
 # Steven
 ### This is my personal work
-### recommend to read the code named "changemoney"
+### First of all, recommend to read the code named "changemoney". the problem is very interesting. 
+ 
