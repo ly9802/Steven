@@ -1,3 +1,4 @@
+#this is the assignment of data manipulation, it is used to generate the boxoffice record for each year
 wget https://goo.gl/BhphrS
 mv BhphrS biopics.csv
 # clean data
