@@ -1,3 +1,4 @@
+#this code is used to extract the director name and calculate how many films are produced by him
 #download data from website and change name
 wget https://goo.gl/BhphrS
 mv BhphrS biopics1.csv
