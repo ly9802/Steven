@@ -1,4 +1,5 @@
 # download the orginal data from website and change its name
+# this is the assignment of data manipulation, it is used to calculate the box office
 wget https://goo.gl/BhphrS
 mv BhphrS biopics.csv
 # clean data
