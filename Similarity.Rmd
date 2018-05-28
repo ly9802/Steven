@@ -4,7 +4,7 @@ author: "n9794182"
 date: "27 May 2018"
 output: html_document
 ---
-
+##### this code is used to find all the pairs of vector which has the maximum similarity. the data source is mtcars.
 ### Task3
 ####display the original dataset
 ```{r}
